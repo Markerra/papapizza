@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://cke5euy1qxymx"]
+
+[ext_resource type="TileSet" uid="uid://c3kqbdcxqq4xg" path="res://assets/tilesets/interior.tres" id="1_pylra"]
+
+[node name="Interior" type="Node2D"]
+
+[node name="Floor" type="TileMapLayer" parent="."]
+use_parent_material = true
+scale = Vector2(0.2, 0.2)
+tile_map_data = PackedByteArray(0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+tile_set = ExtResource("1_pylra")
