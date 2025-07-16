@@ -1,9 +1,11 @@
-[gd_resource type="Resource" load_steps=2 format=3 uid="uid://mp8hjhywirkx"]
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://mp8hjhywirkx"]
 
-[ext_resource type="Script" uid="uid://cx23l0fybx22g" path="res://scripts/data/Ingredient.cs" id="1_u0gnr"]
+[ext_resource type="Texture2D" uid="uid://dj3axa5iw3jev" path="res://assets/sprites/cheese.png" id="1_7untq"]
+[ext_resource type="Script" uid="uid://cx23l0fybx22g" path="res://scripts/ingredients/Ingredient.cs" id="1_u0gnr"]
 
 [resource]
 resource_name = "Cheese"
 script = ExtResource("1_u0gnr")
 id = "cheese"
 Name = "Cheese"
+Icon = ExtResource("1_7untq")

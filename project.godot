@@ -16,7 +16,6 @@ config/features=PackedStringArray("4.4", "C#", "Forward Plus")
 
 [autoload]
 
-GameManager="*res://scripts/managers/GameManager.cs"
 GameState="*res://scripts/core/GameState.cs"
 
 [dotnet]

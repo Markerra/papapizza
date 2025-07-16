@@ -1,9 +1,11 @@
-[gd_resource type="Resource" load_steps=2 format=3 uid="uid://dguiqirwpj0iv"]
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://dguiqirwpj0iv"]
 
-[ext_resource type="Script" uid="uid://cx23l0fybx22g" path="res://scripts/data/Ingredient.cs" id="1_4ni1f"]
+[ext_resource type="Script" uid="uid://cx23l0fybx22g" path="res://scripts/ingredients/Ingredient.cs" id="1_4ni1f"]
+[ext_resource type="Texture2D" uid="uid://d31d2kshfhhv3" path="res://assets/sprites/tomato.png" id="1_7ry4t"]
 
 [resource]
-resource_name = "Cheese"
+resource_name = "Tomato"
 script = ExtResource("1_4ni1f")
 id = "tomato"
 Name = "Tomato"
+Icon = ExtResource("1_7ry4t")

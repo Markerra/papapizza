@@ -1,10 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://dgdyyyfx46don"]
+[gd_scene load_steps=5 format=3 uid="uid://dgdyyyfx46don"]
 
 [ext_resource type="Texture2D" uid="uid://wepok4ri0aq5" path="res://assets/player/farmer.png" id="1_3vyb7"]
 [ext_resource type="Script" uid="uid://c3umqmhixhns1" path="res://scripts/player/PlayerController.cs" id="1_g2els"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g2els"]
 size = Vector2(12, 28)
+
+[sub_resource type="LabelSettings" id="LabelSettings_g2els"]
+font_size = 43
+outline_color = Color(0, 0, 0, 1)
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_g2els")
@@ -17,3 +21,13 @@ texture = ExtResource("1_3vyb7")
 position = Vector2(1, 0)
 scale = Vector2(2, 2)
 shape = SubResource("RectangleShape2D_g2els")
+
+[node name="PlayerHint" type="Label" parent="."]
+visible = false
+offset_left = -18.0
+offset_top = 30.0
+offset_right = 209.0
+offset_bottom = 89.0
+scale = Vector2(0.175, 0.175)
+text = "Подсказка"
+label_settings = SubResource("LabelSettings_g2els")

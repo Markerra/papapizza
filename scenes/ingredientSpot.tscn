@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://dt2qs7r3u0tsn"]
+
+[ext_resource type="Script" uid="uid://bjiamygvfauxt" path="res://scripts/ingredients/IngredientSpot.cs" id="1_n6rtt"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6m8ov"]
+
+[node name="IngredientSpot" type="Node2D"]
+script = ExtResource("1_n6rtt")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+scale = Vector2(2, 2)
+shape = SubResource("CircleShape2D_6m8ov")
+
+[node name="Icon" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+
+[connection signal="body_entered" from="Area2D" to="." method="OnSpotAreaEntered"]
+[connection signal="body_exited" from="Area2D" to="." method="OnSpotAreaExited"]

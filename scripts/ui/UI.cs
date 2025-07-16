@@ -4,17 +4,27 @@ using System.Collections.Generic;
 
 public partial class UI : CanvasLayer
 {
-    public void PrintIngredients()
+    public void PrintOrders()
     {
         List<string> lines = new();
-        string text = "Ингредиенты: \n";
-
-        foreach (var ingredient in IngredientsDatabase.Ingredients.Values)
+        string text = $"Current orders [{OrderManager.CurrentOrders.Count}]: \n";
+        for (int i = 0; i < OrderManager.CurrentOrders.Count; i++)
         {
-            lines.Add(ingredient.Name);
+            Order order = OrderManager.CurrentOrders[i];
+            lines.Add($"#{i + 1} {order.Ingredients.AddedStr} / {order.Ingredients.RecipeStr} [{(int)order.RemainingTime}s]");
         }
 
         text += string.Join("\n", lines);
-        GetNode<Label>("IngredientsDatabase/Label").Text = text;
+        GetNode<Label>("Orders/Label").Text = text;
+    }
+
+    public void ShowHint(string text)
+    {
+        Game.Player.GetNode<Label>("PlayerHint").Text = text;
+        Game.Player.GetNode<Label>("PlayerHint").Visible = true;
+    }
+    public void HideHint()
+    {
+        Game.Player.GetNode<Label>("PlayerHint").Visible = false;
     }
 }
