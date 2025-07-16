@@ -1,17 +1,22 @@
-[gd_scene load_steps=3 format=3 uid="uid://tqgrvj6f1j6l"]
+[gd_scene load_steps=5 format=3 uid="uid://tqgrvj6f1j6l"]
 
 [ext_resource type="PackedScene" uid="uid://cke5euy1qxymx" path="res://scenes/interior.tscn" id="1_0wfyh"]
 [ext_resource type="PackedScene" uid="uid://dgdyyyfx46don" path="res://scenes/player.tscn" id="1_o5qli"]
+[ext_resource type="Script" uid="uid://0gwrso31exir" path="res://scripts/core/Game.cs" id="1_sugp2"]
+[ext_resource type="PackedScene" uid="uid://bqy7uoeuknhja" path="res://scenes/UI.tscn" id="2_jyhfs"]
 
-[node name="GameRoot" type="Node2D"]
+[node name="GameRoot" type="Node2D" node_paths=PackedStringArray("UI")]
+script = ExtResource("1_sugp2")
+UI = NodePath("UI")
 
-[node name="UI" type="CanvasLayer" parent="."]
+[node name="UI" parent="." instance=ExtResource("2_jyhfs")]
 
 [node name="World" type="Node2D" parent="."]
 
 [node name="Interior" parent="World" instance=ExtResource("1_0wfyh")]
 
 [node name="Player" parent="." instance=ExtResource("1_o5qli")]
-position = Vector2(452, 219)
+Speed = 350.0
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
+zoom = Vector2(2.5, 2.5)

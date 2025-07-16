@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://bqy7uoeuknhja"]
+
+[ext_resource type="Script" uid="uid://d7vevr7p056x" path="res://scripts/ui/UI.cs" id="1_dj8aq"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_dj8aq"]
+font_size = 36
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
+
+[node name="UI" type="CanvasLayer"]
+script = ExtResource("1_dj8aq")
+
+[node name="IngredientsDatabase" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="IngredientsDatabase"]
+offset_right = 103.0
+offset_bottom = 40.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "бабаруга"
+label_settings = SubResource("LabelSettings_dj8aq")

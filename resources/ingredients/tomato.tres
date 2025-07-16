@@ -1,0 +1,9 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://dguiqirwpj0iv"]
+
+[ext_resource type="Script" uid="uid://cx23l0fybx22g" path="res://scripts/data/Ingredient.cs" id="1_4ni1f"]
+
+[resource]
+resource_name = "Cheese"
+script = ExtResource("1_4ni1f")
+id = "tomato"
+Name = "Tomato"
